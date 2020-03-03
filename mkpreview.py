@@ -2,5 +2,6 @@
 
 import pathlib
 
-print('test')
+p = Path('.')
 
+print(list(p.glob('*')))
