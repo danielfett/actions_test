@@ -16,6 +16,9 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+    - name: Install mmark
+      run: |
+        wget https://github.com/mmarkdown/mmark/releases/download/v2.2.4/mmark_2.2.4_linux_amd64.tgz -O/tmp/mmark.tgz && tar xzf /tmp/mmark.tgz       
     - name: Run python script
       run: |
         python3 mkpreview.py
